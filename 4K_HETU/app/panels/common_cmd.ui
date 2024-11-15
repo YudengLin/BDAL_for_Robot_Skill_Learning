@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>502</width>
+    <height>465</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Common Cmd</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QToolBox::tab:second {
+    background: #009deb;
+    border-radius: 5px;
+    color: black;
+}
+
+QToolBox::tab:first {
+    background: #4ade00;
+    border-radius: 5px;
+    color: black;
+}
+
+QToolBox::tab:last {
+    background: #f95300;
+    border-radius: 5px;
+    color: black;
+}
+
+QToolBox::tab:selected {
+    font: italic;
+    color: white;
+}
+
+QPushButton {
+	background-color: rgb(255,255,255);
+	border:1px solid rgb(0,32,87);
+	border-radius: 4px;
+	color: rgb(0,32,87);
+	height: 23px;
+	margin-left: 2px;
+	margin-right: 2px;
+	padding: 0 5px 0 5px;
+	font: bold;
+	}
+QPushButton:hover{
+	background-color: rgb(0,32,87);
+	color: rgb(255, 255, 255);
+	}
+QPushButton:pressed{
+	margin: 3px;
+	}
+
+QComboBox{
+	border: 1px solid rgb(0,32,87);
+	border-radius: 0px;
+	padding: 0 0 0 2px;
+	height: 22px;
+	}
+QComboBox:down-button {
+	background-color: rgb(255, 255, 255);
+	}
+
+QLineEdit
+{
+	border:1px solid rgb(0,32,87);
+	color: rgb(0,32,87);
+	border-radius: 4px;
+}</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>16</y>
+     <width>480</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Write(Value:Hex)</string>
+   </property>
+   <widget class="QLineEdit" name="LE_writeData">
+    <property name="geometry">
+     <rect>
+      <x>166</x>
+      <y>18</y>
+      <width>60</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="maxLength">
+     <number>8</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>17</x>
+      <y>19</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Addr</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LE_writeAddr">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>18</y>
+      <width>60</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="maxLength">
+     <number>8</number>
+    </property>
+    <property name="frame">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>133</x>
+      <y>19</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Data</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PB_write">
+    <property name="geometry">
+     <rect>
+      <x>395</x>
+      <y>17</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Write</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>81</y>
+     <width>480</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Read(Value:Hex)</string>
+   </property>
+   <widget class="QLineEdit" name="LE_readCount">
+    <property name="geometry">
+     <rect>
+      <x>166</x>
+      <y>18</y>
+      <width>60</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>1</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>17</x>
+      <y>19</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Addr</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LE_readAddr">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>18</y>
+      <width>60</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="maxLength">
+     <number>8</number>
+    </property>
+    <property name="frame">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>19</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Count</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PB_read">
+    <property name="geometry">
+     <rect>
+      <x>395</x>
+      <y>17</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Read</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>146</y>
+     <width>480</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Task</string>
+   </property>
+   <widget class="QLineEdit" name="LE_taskFile">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>18</y>
+      <width>295</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PB_taskFile">
+    <property name="geometry">
+     <rect>
+      <x>315</x>
+      <y>17</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>File</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PB_taskRun">
+    <property name="geometry">
+     <rect>
+      <x>395</x>
+      <y>17</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Run</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

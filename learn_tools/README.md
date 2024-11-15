@@ -1,0 +1,1 @@
+The code files in this directory either refer to or directly use files from GitHub (https://github.com/caelan/LTAMP).
